@@ -5,11 +5,12 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var helmet = require('helmet');
+var expressSession = require('express-session');
 
 
 var index = require('./server/modules/root/routes');
 var api = {
-
+    instagram:require('./server/modules/instagram/api/routes') 
 };
 
 var db = require('./server/config/mongo');
@@ -27,6 +28,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(expressSession({secret:'dupin',saveUninitialized:false,resave:false,cookie:{maxAge:60000}}));
 app.use(helmet({
   frameguard: {action: 'deny'}
 }));
@@ -34,7 +36,7 @@ app.use(helmet.xssFilter());
 
 
 //Api Routes
-
+app.use('/api/instagram',api.instagram);
 
 
 //Routes
