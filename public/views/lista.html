@@ -14,7 +14,7 @@
                 <tr ng-repeat="tag in tags">
                     <td style="display:none">{{tag._id}}</td>
                     <td>#{{tag.hashtag}}</td>
-                    <td>{{tag.timestamp}}</td>
+                    <td>{{ tag.timestamp | date : "       " +" dd/MM/yyyy " + "        " + " h:mm a "}}</td>
                     <td>
                         <button class="btn btn-primary" type="button" ng-click="go(tag._id)">
                             <span class="glyphicon glyphicon-new-window"></span>
