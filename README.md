@@ -29,7 +29,3 @@ $ gulp
 
 Após rodar o comando acima, os controllers e demais arquivos serão minificados e armazenado em public/dist/build-min.js ,
 basta chama-lo no index.js e no login.js (ele ja esta usando a versão minificada)
-
-## Nuvem
-
-- Clique [aqui](https://www.npmjs.com/package/path-parser) para acessar o projeto que esta na nuvem
