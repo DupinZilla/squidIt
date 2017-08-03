@@ -26,7 +26,7 @@ var _ctrl = {
                 if (err)
                     return res.status(httpResponse.statusCode).json(err);
                 req.session.person = body;
-                return res.redirect('../../../index.html');
+                return res.redirect('../../../painel.html');
             });
     },
     getInstaTags: function (req, res, next) {
