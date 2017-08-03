@@ -10,10 +10,18 @@
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.3",
     "express": "~4.15.2",
+    "express-session": "^1.15.4",
+    "express-sessions": "^1.0.6",
+    "gulp": "^3.9.1",
+    "gulp-minify": "^1.0.0",
     "helmet": "^3.8.1",
     "jade": "~1.11.0",
+    "merge-stream": "^1.0.1",
     "mongoose": "^4.11.4",
     "morgan": "~1.8.1",
     "serve-favicon": "~2.4.2"
+  },
+  "devDependencies": {
+    "gulp-ng-annotate": "^2.0.0"
   }
 }

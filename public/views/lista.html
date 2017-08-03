@@ -1,0 +1,32 @@
+<div class="row">
+    <!-- Blog Sidebar Widgets Column -->
+    <div class="col-md-2" ng-controller="listaController">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>hashtags</th>
+                    <th>Data</th>
+                    <th>Visualizar</th>
+                    <th>Remover</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="tag in tags">
+                    <td style="display:none">{{tag._id}}</td>
+                    <td>#{{tag.hashtag}}</td>
+                    <td>{{tag.timestamp}}</td>
+                    <td>
+                        <button class="btn btn-primary" type="button" ng-click="go(tag._id)">
+                            <span class="glyphicon glyphicon-new-window"></span>
+                        </button>
+                    </td>
+                    <td>
+                        <button class="btn btn-danger" type="button" ng-click="remover(tag._id)">
+                            <span class="glyphicon glyphicon-remove"></span>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
