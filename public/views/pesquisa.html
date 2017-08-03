@@ -1,0 +1,29 @@
+ <div class="row">
+            <!-- Blog Sidebar Widgets Column -->
+            <div class="col-md-12">
+
+                <!-- Blog Search Well -->
+                <div class="well">
+                    <h4>Pesquise uma tag</h4>
+                    <form>
+                    <div class="input-group">
+                        <input type="text" class="form-control" ng-model="hashtag">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button" ng-click="pesquisa()">
+                                <span class="glyphicon glyphicon-search"></span>
+                        </button>
+                        </span>
+                    </div>
+                    </form>
+                    <!-- /.input-group -->
+                </div>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <div ng-repeat="objeto in objetos">
+            <!-- <label>{{objeto.user.full_name}}</label>
+            <img src="{{objeto.user.profile_picture}}" alt="">
+            </br> -->
+            <img src="{{objeto.images.standard_resolution.url}}" width="200px" height="200px" alt="">
+        </div>
