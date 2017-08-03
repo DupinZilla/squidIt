@@ -28,7 +28,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(expressSession({secret:'dupin',saveUninitialized:false,resave:false,cookie:{maxAge:60000}}));
+app.use(expressSession({secret:'dupin',cookie:{maxAge:24*60*60*1000,expires:24*60*60*1000}}));
 app.use(helmet({
   frameguard: {action: 'deny'}
 }));
